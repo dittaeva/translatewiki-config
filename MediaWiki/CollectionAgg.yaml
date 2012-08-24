@@ -1,0 +1,11 @@
+BASIC:
+  id: ext-collection-0-all
+  label: All Collection messages
+  meta: yes
+  class: AggregateMessageGroup
+  description: '{{int:translate-group-desc-collection}}'
+  namespace: NS_MEDIAWIKI
+
+GROUPS:
+  - ext-collection-core
+  - ext-collection-other

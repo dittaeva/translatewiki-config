@@ -1,0 +1,17 @@
+---
+BASIC:
+  id: out-commonist
+  label: Commonist
+  description: "{{int:bw-desc-commonist}}"
+  namespace: NS_COMMONIST
+  class: FileBasedMessageGroup
+
+FILES:
+  class: JavaFFS
+  sourcePattern: %GROUPROOT%/commonist/messages_%CODE%.properties
+  definitionFile: %GROUPROOT%/commonist/messages_%CODE%.properties
+  targetPattern: commonist/messages_%CODE%.properties
+
+TAGS:
+  ignored:
+    - image.status.none

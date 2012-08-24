@@ -1,0 +1,294 @@
+TEMPLATE:
+  BASIC:
+    namespace: NS_PYWIKIPEDIA
+    class: SingleFileBasedMessageGroup
+    description: "{{int:translate-group-desc-pywikipedia}}"
+
+  FILES:
+    class: PythonSingleFFS
+    # Pywikipediabot works on language code, so mapping fallbacked to Wikimedia code.
+    codeMap:
+      be-tarask: be-x-old
+      gan-hant: gan
+      gsw: als
+      hif-latn: hif
+      ike-cans: iu
+      kbd-cyrl: kbd
+      kk-cyrl: kk
+      ks-arab: ks
+      ku-latn: ku
+      nb: "no"
+      rup: roa-rup
+      ruq-latn: ruq
+      sr-ec: sr
+      tg-cyrl: tg
+      tt-cyrl: tt
+      ug-arab: ug
+      vro: fiu-vro
+      zh-hans: zh
+
+  CHECKER:
+    class: MessageChecker
+    checks:
+      - pythonInterpolationCheck
+---
+BASIC:
+  id: out-pywikipedia-0-all
+  label: Pywikipedia
+  meta: yes
+  class: AggregateMessageGroup
+
+GROUPS:
+  - out-pywikipedia-*
+---
+BASIC:
+  id: out-pywikipedia-addtext
+  label: Pywikipedia Add Text
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/add_text.py
+  definitionFile: %GROUPROOT%/pywikipedia/add_text.py
+  targetPattern: pywikipedia/add_text.py
+---
+BASIC:
+  id: out-pywikipedia-archivebot
+  label: Pywikipedia Archive Bot
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/archivebot.py
+  definitionFile: %GROUPROOT%/pywikipedia/archivebot.py
+  targetPattern: pywikipedia/archivebot.py
+---
+BASIC:
+  id: out-pywikipedia-basic
+  label: Pywikipedia Basic
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/basic.py
+  definitionFile: %GROUPROOT%/pywikipedia/basic.py
+  targetPattern: pywikipedia/basic.py
+---
+BASIC:
+  id: out-pywikipedia-capitalizeredirects
+  label: Pywikipedia Capitalize Redirects
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/capitalize_redirects.py
+  definitionFile: %GROUPROOT%/pywikipedia/capitalize_redirects.py
+  targetPattern: pywikipedia/capitalize_redirects.py
+---
+BASIC:
+  id: out-pywikipedia-catall
+  label: Pywikipedia Catall
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/catall.py
+  definitionFile: %GROUPROOT%/pywikipedia/catall.py
+  targetPattern: pywikipedia/catall.py
+---
+BASIC:
+  id: out-pywikipedia-category
+  label: Pywikipedia Category
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/category.py
+  definitionFile: %GROUPROOT%/pywikipedia/category.py
+  targetPattern: pywikipedia/category.py
+---
+BASIC:
+  id: out-pywikipedia-categoryredirect
+  label: Pywikipedia Category Redirect
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/category_redirect.py
+  definitionFile: %GROUPROOT%/pywikipedia/category_redirect.py
+  targetPattern: pywikipedia/category_redirect.py
+---
+BASIC:
+  id: out-pywikipedia-cleansandbox
+  label: Pywikipedia Clean Sandbox
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/clean_sandbox.py
+  definitionFile: %GROUPROOT%/pywikipedia/clean_sandbox.py
+  targetPattern: pywikipedia/clean_sandbox.py
+---
+BASIC:
+  id: out-pywikipedia-commons
+  label: Pywikipedia Commons
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/commons.py
+  definitionFile: %GROUPROOT%/pywikipedia/commons.py
+  targetPattern: pywikipedia/commons.py
+---
+BASIC:
+  id: out-pywikipedia-cosmeticchanges
+  label: Pywikipedia Cosmetic Changes
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/cosmetic_changes.py
+  definitionFile: %GROUPROOT%/pywikipedia/cosmetic_changes.py
+  targetPattern: pywikipedia/cosmetic_changes.py
+---
+BASIC:
+  id: out-pywikipedia-delete
+  label: Pywikipedia Delete
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/delete.py
+  definitionFile: %GROUPROOT%/pywikipedia/delete.py
+  targetPattern: pywikipedia/delete.py
+---
+BASIC:
+  id: out-pywikipedia-djvutext
+  label: Pywikipedia DjVu Text
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/djvutext.py
+  definitionFile: %GROUPROOT%/pywikipedia/djvutext.py
+  targetPattern: pywikipedia/djvutext.py
+---
+BASIC:
+  id: out-pywikipedia-editarticle
+  label: Pywikipedia Edit Article
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/editarticle.py
+  definitionFile: %GROUPROOT%/pywikipedia/editarticle.py
+  targetPattern: pywikipedia/editarticle.py
+---
+BASIC:
+  id: out-pywikipedia-featured
+  label: Pywikipedia Featured
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/featured.py
+  definitionFile: %GROUPROOT%/pywikipedia/featured.py
+  targetPattern: pywikipedia/featured.py
+---
+BASIC:
+  id: out-pywikipedia-fixingredirects
+  label: Pywikipedia Fixing Redirects
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/fixing_redirects.py
+  definitionFile: %GROUPROOT%/pywikipedia/fixing_redirects.py
+  targetPattern: pywikipedia/fixing_redirects.py
+---
+BASIC:
+  id: out-pywikipedia-interwiki
+  label: Pywikipedia Interwiki
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/interwiki.py
+  definitionFile: %GROUPROOT%/pywikipedia/interwiki.py
+  targetPattern: pywikipedia/interwiki.py
+---
+BASIC:
+  id: out-pywikipedia-isbn
+  label: Pywikipedia ISBN
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/isbn.py
+  definitionFile: %GROUPROOT%/pywikipedia/isbn.py
+  targetPattern: pywikipedia/isbn.py
+---
+BASIC:
+  id: out-pywikipedia-movepages
+  label: Pywikipedia Move Pages
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/movepages.py
+  definitionFile: %GROUPROOT%/pywikipedia/movepages.py
+  targetPattern: pywikipedia/movepages.py
+---
+BASIC:
+  id: out-pywikipedia-ndashredir
+  label: Pywikipedia Ndash Redir
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/ndashredir.py
+  definitionFile: %GROUPROOT%/pywikipedia/ndashredir.py
+  targetPattern: pywikipedia/ndashredir.py
+---
+BASIC:
+  id: out-pywikipedia-noreferences
+  label: Pywikipedia No References
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/noreferences.py
+  definitionFile: %GROUPROOT%/pywikipedia/noreferences.py
+  targetPattern: pywikipedia/noreferences.py
+---
+BASIC:
+  id: out-pywikipedia-redirect
+  label: Pywikipedia Redirect
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/redirect.py
+  definitionFile: %GROUPROOT%/pywikipedia/redirect.py
+  targetPattern: pywikipedia/redirect.py
+---
+BASIC:
+  id: out-pywikipedia-replace
+  label: Pywikipedia Replace
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/replace.py
+  definitionFile: %GROUPROOT%/pywikipedia/replace.py
+  targetPattern: pywikipedia/replace.py
+---
+BASIC:
+  id: out-pywikipedia-solvedisambiguation
+  label: Pywikipedia Solve Disambiguation
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/solve_disambiguation.py
+  definitionFile: %GROUPROOT%/pywikipedia/solve_disambiguation.py
+  targetPattern: pywikipedia/solve_disambiguation.py
+---
+BASIC:
+  id: out-pywikipedia-table2wiki
+  label: Pywikipedia Table2Wiki
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/table2wiki.py
+  definitionFile: %GROUPROOT%/pywikipedia/table2wiki.py
+  targetPattern: pywikipedia/table2wiki.py
+---
+BASIC:
+  id: out-pywikipedia-template
+  label: Pywikipedia Template
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/template.py
+  definitionFile: %GROUPROOT%/pywikipedia/template.py
+  targetPattern: pywikipedia/template.py
+---
+BASIC:
+  id: out-pywikipedia-thirdparty
+  label: Pywikipedia Third Party
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/thirdparty.py
+  definitionFile: %GROUPROOT%/pywikipedia/thirdparty.py
+  targetPattern: pywikipedia/thirdparty.py
+---
+BASIC:
+  id: out-pywikipedia-unlink
+  label: Pywikipedia Unlink
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/unlink.py
+  definitionFile: %GROUPROOT%/pywikipedia/unlink.py
+  targetPattern: pywikipedia/unlink.py
+---
+BASIC:
+  id: out-pywikipedia-welcome
+  label: Pywikipedia Welcome
+
+FILES:
+  sourcePattern: %GROUPROOT%/pywikipedia/welcome.py
+  definitionFile: %GROUPROOT%/pywikipedia/welcome.py
+  targetPattern: pywikipedia/welcome.py

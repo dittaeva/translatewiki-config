@@ -1,0 +1,33 @@
+BASIC:
+  description: "This group is currently experimental. Translations at your own risk."
+  id: out-waymarked-trails
+  label: Waymarked Trails
+  namespace: NS_OSM
+  class: FileBasedMessageGroup
+  codeBrowser: https://github.com/lonvia/waymarked-trails-site/blob/master/django/%FILE%#L%LINE%
+
+MANGLER:
+  class: StringMatcher
+  prefix: wmt-
+  patterns:
+    - "*"
+
+FILES:
+  class: GettextFFS
+  sourcePattern: %GROUPROOT%/waymarked-trails-site/django/locale/%CODE%/LC_MESSAGES/django.po
+  definitionFile: %GROUPROOT%/waymarked-trails-site/django/locale/qot/LC_MESSAGES/django.po
+  targetPattern: waymarked-trails-site/django/locale/%CODE%/LC_MESSAGES/django.po
+  codeMap:
+    "no": x-invalidLanguageCode
+
+  header: |
+    # This file is part of the Waymarked Trails Map Project
+    # Copyright (C) 2011-2012
+    # This file is distributed under the same license as the main package.
+    #
+
+TAGS:
+  optional:
+   - wmt-664add438097fbd4307f814de8e62a10f8905588-Wikipedia
+   - wmt-94f96bf4dbc0bf4d2920bb3cb506cacc84fbf7c3-d_km
+

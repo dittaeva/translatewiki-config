@@ -1,0 +1,10 @@
+BASIC:
+  id: wikia-0-all
+  label: Wikia MediaWiki extensions
+  meta: yes
+  class: AggregateMessageGroup
+  description: '{{int:translate-group-desc-wikiaextensions}}'
+  namespace: NS_WIKIA
+
+GROUPS:
+  - wikia-*

@@ -1,0 +1,10 @@
+BASIC:
+  id: ext-0-all
+  label: MediaWiki extensions
+  meta: yes
+  class: AggregateMessageGroup
+  description: '{{int:translate-group-desc-mediawikiextensions}}'
+  namespace: NS_MEDIAWIKI
+
+GROUPS:
+  - ext-*

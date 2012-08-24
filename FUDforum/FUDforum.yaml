@@ -1,0 +1,30 @@
+---
+BASIC:
+  id: out-fudforum
+  label: FUDforum
+  description: "{{int:bw-desc-fudforum}}"
+  namespace: NS_FUDFORUM
+  class: FileBasedMessageGroup
+
+FILES:
+  class: JavaFFS
+  keySeparator: ":"
+  sourcePattern: %GROUPROOT%/fudforum/%CODE%/msg
+  targetPattern: fudforum/%CODE%/msg
+
+CHECKER:
+  class: FUDforumMessageChecker
+  checks:
+    - FUDforumSyntaxCheck
+    - FUDforumVariablesCheck
+    - FUDforumLongVariablesCheck
+    - braceBalanceCheck
+
+AUTOLOAD:
+  FUDforumMessageChecker: Checker.php
+
+TAGS:
+  optional:
+    - msg_title
+    - thread_title
+    - tree_title
